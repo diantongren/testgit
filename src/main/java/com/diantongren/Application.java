@@ -1,16 +1,15 @@
 package com.diantongren;
 
+import com.diantongren.dao.UserDao;
 import com.diantongren.pojo.User;
 
 public class Application {
     public static void main(String[] args) {
-        User user = new User();
-        user.setId(123123123);
-        user.setUsername("diantongren");
-        user.setPassword("password");
-        user.setAge(22);
-        user.setEmail("diantongren@xxx.com");
+        UserDao userDao = new UserDao();
+        User user1 = userDao.getUser1();
+        User user2 = userDao.getUser2();
 
-        System.out.println(user);
+        System.out.println(user1);
+        System.out.println(user2);
     }
 }
